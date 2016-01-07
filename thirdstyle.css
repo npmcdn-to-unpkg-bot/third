@@ -9,6 +9,7 @@ body {
 	font-family: 'Jura', sans-serif;
 	text-align: center;
 	background-color: rgb(46,29,23);
+
 }
 
 img {
@@ -24,24 +25,21 @@ h1, h2 {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 4rem;
 	margin:55px 0px 0px 0px;
+	width:400px;
 }
-
 
 h2 {
 	font-size: 2rem;
-	margin:0px;
+	
 }
-
-
 
 ul.language {
 	list-style-type:none;
 	margin:0;
 	padding:0;
 	text-align:left;
-
 }
 
 ul.language li ul {
@@ -52,7 +50,7 @@ ul.language li ul {
 li.button {
 	display:inline-block;
 	margin:0;
-	padding:20px 17px;
+	padding:25px 17px;
 	background:rgb(177,159,137);
 	position:absolute;
 	top:0px;
@@ -63,66 +61,106 @@ li.button {
 li.button:hover ul.lang{
 	display:block;
 	position:absolute;
-	top:50px;
+	top:60px;
 	right:0px;
-
 }
 
 
 ul.lang li {
 	list-style-type:none;
-
 }
 
 ul.lang li a {
 	text-decoration: none;
-	background-color: rgba(0,0,0,.5);
+	background-color: rgba(0,0,0,.7);
 	padding:20px 62px;
 	color:white;
 	display:block;
-
 }
 
 ul.lang a:hover {
 	background: rgb(73,44,40);
 }
 
-section.top {
-	min-height:100vh;
-	
-}
 
 .banner img {
 	max-height: 100%;
+	max-width:400px;
 	flex:none;
-
 }
 
 .banner {
 	height:220px;
 	display:flex;
-	justify-content:space-around;
+	justify-content:space-between;
 	margin-top: 50px;
 	background:rgb(177,159,137);
 }
 
 .banner p {
-	margin-top: 140px;
+	margin: 45px 5% 0 0;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 2rem;
+	width:200px;
 }
 
-p.info {
+@media (max-width:960px) {
+	.banner  {
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		height:100%;
+	}
+
+	.banner img {
+		max-width:350px;
+		margin:20px;
+	}
+
+	h1, .banner p {
+		width:100%;
+		margin:10px auto;	
+	}
+}
+
+@media (max-width:760px) {
+	h1 {
+		font-size: 3rem;
+	}
+
+	.banner p {
+		font-size: 1.5rem;
+		padding:0 3%;
+	}
+}
+	
+
+section {
+	margin:60px auto;
+}
+
+div.company, section.about {
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	padding:30px;
+}
+
+
+p.info, div.ship {
 	width:50%;
-	float:left;
 	padding:25px;
-	margin:0 0 0 5%;
+	font-size: 1.2rem;
 	background:rgb(177,159,137);
-	font-size: 1.5rem;
 	
 }
 
+
+
 .gallery {
-	width:30%;
-	margin:20px 5% 0px auto;
+	width:350px;
+	/*margin:20px 5% 0px auto;*/
+	box-shadow:0 0 10px black;
 }
 
 .gallery-cell {
@@ -130,22 +168,112 @@ p.info {
 
 }
 
-
-
-
-
-
-
 .flickity-prev-next-button {
   display: none;
 }
 
+.about {
+	background:rgb(73,44,40);
+}
 
 
 .about img {
-	width:40%;
-	float:left;
+	max-width:380px;
+/*	float:left;*/
+	border-radius: 50%;
+	/*margin:60px 0px 60px 4%;*/
+	/*border:1px solid white;*/
+}
+
+@media (max-width:860px) {
+
+	div.company, section.about {
+		flex-direction:column;
+
+	}
+
+	p.info, div.scroll, .about img, div.ship {
+		width:100%;
+	}
+
+	.gallery {
+		margin:10px auto;
+	}
+
+	.about img {
+		margin-bottom:20px;
+	}
+
+}
+
+.contact {
+	padding:30px;
+	width:70%;
+	background:rgb(177,159,137);
+	font-size: 1.2rem;
+	
+
+}
+
+.bar p{
+	margin:0;
+	text-align: right;
+	font-size: 2rem;
+	color:rgb(254,233,52);
+	position:relative;
+	top:150px;
+	right:10px;
+	max-width: 100%;
+
 }
 
 
 
+.bar {
+	margin: 30px auto;
+	width:400px;
+	height:300px;
+	box-shadow: 0 0 10px black;
+	background-image: url(images/stool.jpg);
+	background-size: cover;
+	
+}
+	
+.con {
+	margin:10px;
+}
+
+input, textarea {
+	outline-color:rgb(254,233,52);
+	padding:5px;
+	max-width: 100%;
+}
+
+textarea {
+	display:block;
+	margin:10px auto;
+}
+
+input.send {
+	background:rgb(73,44,40);
+	color:white;
+	border:none;
+	box-shadow: 2px 2px 5px black;
+}
+
+input.send:hover {
+	font-weight: bold;
+	box-shadow: 4px 4px 10px black;
+	color:rgb(254,233,52);
+}
+
+@media (max-width:660px) {
+	section.contact {
+		width:100%;
+		padding:20px 0px;
+	}
+
+	div.bar, textarea {
+		width:95%;
+	}
+}

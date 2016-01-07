@@ -35,19 +35,26 @@
 			
 			<img src="images/Morn.jpg">
 			
-			<div class="title">
-				<h1>Morn's</h1>
-				<h2>Shipping Services</h2>
-			</div>
+			
+			<h1>Morn's Shipping</h1>
+			
 
 			<p>Your first choice in the Alpha Quandrant</p>
 		</div> <!--banner -->
-		<div class="clearfix">
-			<p class="info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis magni commodi non expedita nobis molestiae voluptas est eligendi voluptatum dolore asperiores nisi, libero mollitia possimus, aspernatur incidunt earum quia qui corrupti adipisci! Nostrum dolor laboriosam porro doloribus nemo deleniti temporibus iste mollitia, officia.</p>
+
+		<div class="company">
+
+			<p class="info"><strong>Hello! I'm Morn.</strong> My transport services company has been safely shuttling your goods across this sector since the Cardassians retreated from Bajor. No cargo is too mundane for this ship. Perishables always welcome. Personally trusted by Deep Space Nine Commander Benjamin Sisko. Here at Morn's Shipping, our philosophy is to work hard first, and drink hard later.</p>
 
 			<div class="scroll">
 
-				<div class="gallery js-flickity" data-flickity-options='{ "autoPlay": true }' '{"wrapAround": true}'>
+				<div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true, "autoPlay": 6000 }'>
+
+					<img src="images/kira-jadzia.jpg" class="gallery-cell">
+
+					<img src="images/ds9.jpg" class="gallery-cell">
+
+					<img src="images/cheers.jpg" class="gallery-cell">
 
 					<img src="images/kira-jadzia.jpg" class="gallery-cell">
 
@@ -58,19 +65,54 @@
 				</div> <!-- flickity -->
 
 			</div> <!-- scroll -->
-		</div> <!-- clearfix -->
+		</div>  <!-- company -->
 
 	</section> <!-- top -->
 
-	<section class="about clearfix" id="about">
+	<section class="about" id="about">
 
 	<img src="images/cargo.jpg">
-
-	<h2>Our Ship</h2>
-	<p>Morn's Shipping Services is equipped with our very own, state of the art freighter vessel. Always on time. Your precious cargo will always arrive in one piece!</p>
+	<div class="ship">
+		<h2>Our Ship</h2>
+		<p>Morn is the proud owner a state of the art freighter vessel. Always on time. Your precious cargo will arrive in one piece! Our fleet may be small, but our second stomachs are huge!</p>
+	</div>
 	</section> <!-- about -->
 
 	<section class="contact" id="contact">
+
+		<h2>Contact</h2>
+		<p>Morn will be happy to provide you with a quote for your next transport mission!</p>
+
+		<p>He can be reached at:</p>
+
+		<div class="bar">
+			<p>Morn, c/o:</p>
+			<p>Quark's Bar</p>
+			<p>His Usual Seat</p>
+			<p>Deep Space Nine</p>
+		</div>
+
+		<p>or, send Morn a message below!</p>
+		<form>
+			<div class="con">
+				<label for="name">Your name:</label>
+				<input type="text" class="name" name="name" placeholder="Space Dude">
+			</div>
+
+			<div class="con">
+				<label for="email">Your email:</label>
+				<input type="email" name="email" placeholder="spacedude@risa.com">
+			</div>
+
+			
+			<label for="message">Your message to Morn:</label>
+			<textarea name="message" cols="40" rows="10" placeholder="MORN!"></textarea>
+			
+
+			<input type="submit" value="Send" class="send">
+		</form>
+
+		<p>Morn looks forward to hearing from you today!</p>
 	</section>
 
 
